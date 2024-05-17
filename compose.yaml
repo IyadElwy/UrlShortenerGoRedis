@@ -1,0 +1,12 @@
+services:
+  cache:
+    image: redis:7.2.4
+    ports:
+      - '6379:6379'
+    command: redis-server
+    volumes:
+      - cache:/data
+
+volumes:
+  cache:
+    driver: local
